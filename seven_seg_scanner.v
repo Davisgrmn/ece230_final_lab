@@ -40,11 +40,9 @@ module seven_seg_scanner(
     );
     
     assign anode = ~state;
-    assign next[0] = next[3];
-    assign next[1] = next[0];
-    assign next[2] = next[1];
-    assign next[3] = next[2];
-    
-    
+    assign next[0] = state[3];
+    assign next[1] = state[0];
+    assign next[2] = state[1];
+    assign next[3] = state[2];
 
 endmodule
