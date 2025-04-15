@@ -4,7 +4,8 @@ module math_block(
     output [3:0] AplusB,
     output [3:0] AminusB
 );
-    
-    
+
+    assign APlusB = A + B;
+    assign AMinusB = A + (~B + 1);
 
 endmodule
